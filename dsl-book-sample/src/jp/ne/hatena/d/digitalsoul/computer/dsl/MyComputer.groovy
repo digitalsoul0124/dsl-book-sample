@@ -20,9 +20,6 @@ public class MyComputer extends ComputerBuilder {
                 d.diskInterface = "SATA"
             }
         }
-        
-            
     }
-        
 
 }
