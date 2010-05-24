@@ -10,6 +10,7 @@ public class RuleBuilder {
 
     PromotionRule rule
 
+    // score
     RuleBuilder getScore() {
         rule = new PromotionRule()
         itinerary.rules.add rule
@@ -21,12 +22,12 @@ public class RuleBuilder {
     }
 
     // value of score
-    def propertyMissing(String name) { 
-        if('_' != name.charAt(0)) {
+    def propertyMissing(String value) { 
+        if('_' != value.charAt(0)) {
             throw new IllegalStateException()
         }
         
-        rule.score = Integer.valueOf(name.substring(1))
+        rule.score = Integer.valueOf(value.substring(1))
 
         new ConditionBuilder(ruleBuilder:this)
     }

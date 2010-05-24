@@ -7,7 +7,7 @@ public class RuleEvaluator {
     private RuleBuilder builder = new RuleBuilder()
 
     void rule(String rule) {
-        Eval.x(this.builder, polish(rule))
+        Eval.x(builder, polish(rule))
     }
 
     String polish(String rule) {
